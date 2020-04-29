@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,gBAAgB,CAAA;EACZ,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,QAAQ;EACrB,KAAK,EAAE,IAAI;CACd",
+    "sources": [
+        "ForecastWeather.scss"
+    ],
+    "names": [],
+    "file": "ForecastWeather.css"
+}
