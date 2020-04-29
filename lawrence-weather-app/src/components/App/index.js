@@ -25,7 +25,7 @@ import './animate.css'
 
 import './App.css'
 
-function turnIdToClassName(id) {
+function getIconAndRecommendation(id) {
     const prefix = "wi wi-";
     const icon = prefix + weatherIcons.default[id].icon;
     const recommendation = recommendations.default[id].recommendation
@@ -37,7 +37,7 @@ function mapCurrentWeatherData(data) {
         city: data.name,
         country: data.sys.country,
         date: data.dt * 1000,
-        icon_recommend: turnIdToClassName(data.weather[0].id),
+        icon_recommend: getIconAndRecommendation(data.weather[0].id),
         temperature: data.main.temp,
         description: data.weather[0].description,
     }
@@ -55,7 +55,7 @@ function mapForecastWeatherData(data) {
     for (let i = 0, len = data.list.length; i < len; i += 8) {
         mapped.push({
             date: data.list[i + 4].dt * 1000,
-            weather: turnIdToClassName(data.list[i + 4].weather[0].id)[0],
+            weather: getIconAndRecommendation(data.list[i + 4].weather[0].id)[0],
             temperature: data.list[i + 4].main.temp
         })
     }
@@ -165,8 +165,9 @@ class App extends Component {
             (forecastWeather && Object.keys(forecastWeather).length)
         ) {
             return (
-                <div className="app" style={{ background: `url(${photo}) no-repeat` }}>
+                <div className="app">
                     <Weather
+                        photo={photo}
                         currentWeather={currentWeather}
                         forecastWeather={forecastWeather}
                         onCitySearch={this.handleCitySearch}

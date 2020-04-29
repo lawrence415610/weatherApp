@@ -1,7 +1,7 @@
 .weather {
-  font-family: 'Baloo Bhaina 2', cursive;
+  font-family: "Baloo Bhaina 2", cursive;
   padding: 50px;
-  background-color: rgba(208, 250, 255, 0.7);
+  background-color: #E6EBFB;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

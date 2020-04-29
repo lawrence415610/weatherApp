@@ -1,25 +1,26 @@
-.weather{
-    font-family: 'Baloo Bhaina 2', cursive;
-    padding:50px;
-    background-color:rgba(208, 250, 255, 0.7);
+.weather {
+  font-family: "Baloo Bhaina 2", cursive;
+  padding: 50px;
+  background-color: #E6EBFB;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 580px;
+  box-shadow: 4px 3px 11px #333333;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__left {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 580px;
-    box-shadow:4px 3px 11px #333333;
-    &__header{
-        display: flex;
-        justify-content: space-between;
-    }
-    &__left{
-        display: flex;
-        flex-direction: column;
-    }
-    &__right{
-        display: flex;
-        flex-direction: column;
-    }
-    &__footer{
-        display: flex;
-    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+  }
+  &__footer {
+    display: flex;
+  }
 }

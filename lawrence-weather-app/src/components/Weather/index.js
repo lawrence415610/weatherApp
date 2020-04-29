@@ -1,13 +1,13 @@
 import React from "react";
-
 import "./Weather.css"
 
 import Time from '../Time'
 import SearchCity from '../SearchCity'
 import CurrentWeather from '../CurrentWeather'
 import ForecastWeather from '../ForecastWeather'
+import CityPhoto from '../CityPhoto'
 
-export default function Weather({ currentWeather, forecastWeather, onCitySearch, onCityChange }) {
+export default function Weather({ currentWeather, forecastWeather, onCitySearch, onCityChange, photo }) {
     return (
         <div className="weather">
             <div className="weather__header">
@@ -16,6 +16,10 @@ export default function Weather({ currentWeather, forecastWeather, onCitySearch,
                     <SearchCity
                         onCitySearch={onCitySearch}
                         onCityChange={onCityChange}
+                    />
+                    <CityPhoto
+                        photo={photo}
+                        recommendation={currentWeather.icon_recommend[1]}
                     />
                 </div>
                 <div className="weather__right">
@@ -28,3 +32,7 @@ export default function Weather({ currentWeather, forecastWeather, onCitySearch,
         </div>
     )
 }
+
+
+
+

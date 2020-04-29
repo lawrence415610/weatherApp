@@ -20,9 +20,6 @@ export default function CurrentWeather({ currentWeather }) {
       <div className="weathernow__loc">
         {currentWeather.city}, {currentWeather.country}
       </div>
-      <div className="weathernow__rec">
-        {currentWeather.icon_recommend[1]}
-      </div>
     </div>
   )
 }
