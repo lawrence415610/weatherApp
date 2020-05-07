@@ -11,13 +11,13 @@ import { makeStyles } from '@material-ui/core/styles';
 export default function CityPhoto({ photo, recommendation }) {
     const useStyles = makeStyles({
         root: {
-            maxWidth: 500,
-            maxHeight: 200,
+            maxWidth: 460,
+            maxHeight: 250,
             marginTop: 40,
             display: 'flex',
         },
         cover: {
-            width: 330,
+            width: 280,
         },
         content: {
             display: 'flex',

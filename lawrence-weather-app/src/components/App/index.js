@@ -15,7 +15,8 @@ import {
     QUERY,
     UNITS_METRIC,
     APPID,
-    PHOTO_API_URL
+    PHOTO_API_URL,
+    PHOTO_API_KEY
 } from '../../constants'
 
 import * as weatherIcons from "./icons.json";
@@ -129,7 +130,7 @@ class App extends Component {
 
     fetchPhoto(city) {
         return fetch(
-            `${PHOTO_API_URL}/search/photos/?query=${city}&client_id=GwR354sfHYvnedY2xuCWcZOjT1leWGjGwJX7ImBAwlw`
+            `${PHOTO_API_URL}/search/photos/?query=${city}&client_id=${PHOTO_API_KEY}`
         )
             .then(res => handleResponse(res))
             .then(photo => photo.results[0].urls.regular)

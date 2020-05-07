@@ -5,4 +5,5 @@ export const FORECAST = 'forecast';
 export const QUERY = 'q=';
 export const UNITS_METRIC = 'units=metric';
 export const APPID = 'APPID=';
-export const PHOTO_API_URL = 'https://api.unsplash.com'
+export const PHOTO_API_URL = 'https://api.unsplash.com';
+export const PHOTO_API_KEY = 'GwR354sfHYvnedY2xuCWcZOjT1leWGjGwJX7ImBAwlw';

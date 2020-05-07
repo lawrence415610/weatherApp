@@ -5,24 +5,14 @@ export default class Time extends Component {
     constructor() {
         super();
         this.state = {
-            time: new Date().toLocaleDateString("en-GB", {
-                weekday: "short",
-                day: "numeric",
-                month: "short",
-                year: "numeric"
-            })
+            time: new Date()
         }
         this.setCurrentTime = this.setCurrentTime.bind(this);
     }
 
     setCurrentTime() {
         this.setState({
-            time: new Date().toLocaleTimeString("en-GB", {
-                weekday: "short",
-                day: "numeric",
-                month: "short",
-                year: "numeric"
-            })
+            time: new Date()
         });
     };
 
@@ -40,15 +30,13 @@ export default class Time extends Component {
     render() {
         const { time } = this.state;
 
-        const date = time.substr(0, 16);
-        const hour = time.substr(18, 2);
-        const minute = time.substr(21, 2);
-        const second = time.substr(24, 2);
+        const date = time.toLocaleDateString('en-US');
+        const current_time = time.toLocaleTimeString('en-US');
 
         return (
             <div>
                 <div style={{ fontWeight: 'bold' }}>
-                    {hour}:{minute}:{second}
+                    {current_time}
                 </div>
                 <div style={{ fontWeight: 'bold' }}>
                     {date}
