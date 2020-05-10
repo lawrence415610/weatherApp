@@ -9,15 +9,16 @@ import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 import {
     WEATHER_API_URL,
-    WEATHER_API_KEY,
     WEATHER,
     FORECAST,
     QUERY,
     UNITS_METRIC,
     APPID,
-    PHOTO_API_URL,
-    PHOTO_API_KEY
+    PHOTO_API_URL
 } from '../../constants'
+
+const WEATHER_API_KEY = process.env.WEATHER_API_KEY;
+const PHOTO_API_KEY = process.env.PHOTO_API_KEY;
 
 import * as weatherIcons from "./icons.json";
 import * as recommendations from "./recommendations.json"
