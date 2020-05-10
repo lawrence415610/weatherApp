@@ -1,2 +1,1 @@
-# weatherApp
-a weather app build by native react
+The is a weather app created by Lawrence Liu( Yelin Liu) in 4/29/2020
